@@ -39,3 +39,15 @@ settings under `dist/desktop-verification-packaged`; originals are not changed.
 Source archives, package integrity and SHA256 hashes were also checked.
 This launcher work does not establish a new campaign playthrough or physical
 controller test. The older installers and emulator-core bundle remain available.
+
+
+## Aladdin repaint update (2026-10-28)
+
+Aladdin now composes frames in a reusable offscreen bitmap and presents each
+complete frame in one blit. This removes the visible black clear between
+frames. The original launcher exposed 2 black frames in 90 actual-window
+captures; the corrected launcher exposed 0 in 90. Repeated window resizing and
+fullscreen transitions kept GDI resource counts stable.
+`python desktop/verify_aladdin_render.py` repeats this rendering check (requires
+Pillow and the supported original ROM). The Aladdin portable ZIP was refreshed
+with matching source; the engine and all other game/core assets are unchanged.
