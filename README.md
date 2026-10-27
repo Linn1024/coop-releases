@@ -2,12 +2,29 @@
 
 [Watch gameplay and new projects on Linn1024’s YouTube channel](https://www.youtube.com/channel/UCiU71T2o9V1uv62ZgrTRFew)
 
-[Download installers and emulator cores](https://github.com/Linn1024/coop-releases/releases/tag/windows-2026-10-27)
+Download, extract the entire ZIP, and open the game's EXE. On first run, choose
+your own original USA ROM. Its location is remembered; next time just open the EXE.
 
-Aladdin, Splatterhouse 3, Indiana Jones and Batman Returns.
+| Game | Portable Windows x64 download |
+| --- | --- |
+| Aladdin | [Download ZIP](https://github.com/Linn1024/coop-releases/releases/download/windows-2026-10-27/Aladdin-Coop-Portable-Windows-x64.zip) |
+| Splatterhouse 3 | [Download ZIP](https://github.com/Linn1024/coop-releases/releases/download/windows-2026-10-27/Splatterhouse3-Coop-Portable-Windows-x64.zip) |
+| Indiana Jones | [Download ZIP](https://github.com/Linn1024/coop-releases/releases/download/windows-2026-10-27/IndianaJones-Coop-Portable-Windows-x64.zip) |
+| Batman Returns | [Download ZIP](https://github.com/Linn1024/coop-releases/releases/download/windows-2026-10-27/BatmanReturns-Coop-Portable-Windows-x64.zip) |
 
-Batman Returns was updated on 27 October 2026 with the enemy-grab ownership fix, including two-enemy grabs beside an idle partner. Both the core bundle and Batman installer include matching updated source. See [update and verification details](BATMAN-UPDATE.md).
-For standalone play, download a game installer, extract ZIPs, run setup, and choose your own original USA ROM.
+**Settings > Screen size** offers 1x-4x windows and fullscreen. **Settings >
+Controls** (F2) changes P1/P2 keyboard and Xbox-compatible controller bindings.
+F11 or Alt+Enter toggles fullscreen. Window size, fullscreen, controls and ROM
+location persist. **Settings > Choose ROM** changes the remembered location.
+
+Keep the EXE and its `engine` folder together. No installer, compiler, Python,
+separate emulator or administrator access is needed. ROMs are not included or
+copied. Settings and standalone saves live in `%LOCALAPPDATA%\Linn1024Coop`;
+**Settings > Open saves and settings folder** opens the game's folder.
+
+See [portable build and verification details](PORTABLE.md). The [Windows release](https://github.com/Linn1024/coop-releases/releases/tag/windows-2026-10-27)
+also retains all previous installers and the complete eight-DLL emulator bundle.
+Batman?s earlier enemy-grab fix is included; see [its verification](BATMAN-UPDATE.md).
 
 # Using the co-op cores in an emulator
 
