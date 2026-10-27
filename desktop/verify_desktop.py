@@ -106,14 +106,13 @@ def verify(game,source=None):
         command(main,9003);assert u.GetWindowLongW(main,-16)&0x80000000
         command(main,9003);assert client(main)==size
         command(main,9002)
-        cls='IndianaControls' if folder=='indianaJonesCoop' else 'CoopDesktopControls'
+        cls='CoopDesktopControls'
         controls=wait(process,lambda x:x[1]==cls)
         command(controls,200+jump_row)
         u.SendMessageW(controls,0x100,ord('Z'),0)
-        path=settings/('controls.ini' if folder=='indianaJonesCoop' else 'launcher.ini')
+        path=settings/'launcher.ini'
         saved=config(path)
-        if folder=='indianaJonesCoop':assert saved['Player2']['jump']=='90'
-        else:assert saved['P2Keyboard'][str(jump_bit)]=='90'
+        assert saved['P2Keyboard'][str(jump_bit)]=='90'
         u.SendMessageW(controls,0x10,0,0)
         close(process,main)
         process=subprocess.Popen([str(stage/exe),'--settings-dir',str(settings)],cwd=stage)

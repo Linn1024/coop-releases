@@ -51,3 +51,23 @@ fullscreen transitions kept GDI resource counts stable.
 `python desktop/verify_aladdin_render.py` repeats this rendering check (requires
 Pillow and the supported original ROM). The Aladdin portable ZIP was refreshed
 with matching source; the engine and all other game/core assets are unchanged.
+
+
+## Controls and ten slots (2026-10-28)
+
+All four launchers use aligned columns labeled Keyboard and Controller, with a
+visible Clear button per binding. Controller means an Xbox-compatible gamepad.
+The controls window includes configurable keyboard shortcuts and clickable
+save/load/next/previous actions. Defaults are F5 quicksave, F8 quickload, F6 next
+slot and F7 previous slot. The Saves menu contains slots 1-10. Slot selection
+wraps and persists. Clearing a shortcut disables its previous host function.
+Indiana retains its legacy native controls only for its headless UI diagnostics;
+normal play uses the shared window and migrates old bindings as defaults.
+
+`python desktop/verify_save_controls.py` tests all four actual launchers with
+isolated settings: clear keyboard/controller bindings, clear and restore F5, all
+ten separate save files, wraparound, loading/resaving an earlier state, rejecting
+malformed saves, rebinding F7 to F12, and retaining bindings/slot on restart.
+Genesis and Indiana states roundtrip byte-for-byte; SNES state restoration
+normalizes some emulator fields, so its byte identity is not required.
+No physical-controller test is claimed.

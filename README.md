@@ -15,7 +15,10 @@ your own original USA ROM. Its location is remembered; next time just open the E
 **Settings > Screen size** offers 1x-4x windows and fullscreen. **Settings >
 Controls** (F2) changes P1/P2 keyboard and Xbox-compatible controller bindings.
 F11 or Alt+Enter toggles fullscreen. Window size, fullscreen, controls and ROM
-location persist. **Settings > Choose ROM** changes the remembered location.
+location persist. Each binding has a **Clear** button. **F5** quicksaves, **F8**
+quickloads, **F6/F7** select the next/previous of ten slots. These shortcuts can
+be changed or cleared in Controls; **Saves** selects slots and saves/loads directly.
+**Settings > Choose ROM** changes the remembered location.
 
 Keep the EXE and its `engine` folder together. No installer, compiler, Python,
 separate emulator or administrator access is needed. ROMs are not included or
