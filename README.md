@@ -5,6 +5,8 @@
 [Download installers and emulator cores](https://github.com/Linn1024/coop-releases/releases/tag/windows-2026-10-27)
 
 Aladdin, Splatterhouse 3, Indiana Jones and Batman Returns.
+
+Batman Returns was updated on 27 October 2026 with the enemy-grab ownership fix, including two-enemy grabs beside an idle partner. Both the core bundle and Batman installer include matching updated source. See [update and verification details](BATMAN-UPDATE.md).
 For standalone play, download a game installer, extract ZIPs, run setup, and choose your own original USA ROM.
 
 # Using the co-op cores in an emulator
