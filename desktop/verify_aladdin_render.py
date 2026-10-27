@@ -24,6 +24,12 @@ def verify(exe,label):
    frame=ImageGrab.grab(bbox=(point.x,point.y,point.x+640,point.y+448))
    brightness.append(sum(ImageStat.Stat(frame.resize((32,24))).mean)/3)
   blank=sum(value<5 for value in brightness)
+  print(label,'blank frames:',blank,'of',len(brightness),'brightness range:',round(min(brightness),2),round(max(brightness),2),flush=True)
+  # Pause the host while measuring handles. Otherwise sampling can catch
+  # transient brush/font/DC objects in an in-progress paint.
+  ui.command(hwnd,9002)
+  controls=ui.wait(p,lambda x:x[1]=='CoopDesktopControls')
+  time.sleep(.2)
   process=kernel.OpenProcess(0x400,False,p.pid)
   snapshots=[]
   for batch in range(3):
@@ -36,6 +42,7 @@ def verify(exe,label):
   kernel.CloseHandle(process)
   before,after=snapshots[1:]
   assert after<=before+1,snapshots
+  u.SendMessageW(controls,0x10,0,0)
   assert ui.client(hwnd)==(640,448)
   if label=='fixed':assert u.SendMessageW(hwnd,0x14,0,0)==1,'WM_ERASEBKGND must be handled'
   print(label,'blank frames:',blank,'of',len(brightness),'brightness range:',round(min(brightness),2),round(max(brightness),2),'GDI handles:',before,after,flush=True)
