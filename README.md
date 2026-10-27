@@ -1,5 +1,7 @@
 # Co-op downloads for Windows
 
+[Watch gameplay and new projects on Linn1024’s YouTube channel](https://www.youtube.com/channel/UCiU71T2o9V1uv62ZgrTRFew)
+
 [Download installers and emulator cores](https://github.com/Linn1024/coop-releases/releases/tag/windows-2026-10-27)
 
 Aladdin, Splatterhouse 3, Indiana Jones and Batman Returns.
